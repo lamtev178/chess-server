@@ -3,6 +3,7 @@ const PORT = process.env.PORT || 3030;
 const io = require("socket.io")(PORT,{
   cors: {
     origin: "https://la-chess.herokuapp.com"
+    //origin: "http://localhost:3000"
   }
 });
 let board
