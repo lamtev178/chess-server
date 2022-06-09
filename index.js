@@ -1,6 +1,6 @@
 const io = require("socket.io")(3030,{
   cors: {
-    origin: "http://localhost:3000"
+    origin: "https://la-chess.herokuapp.com"
   }
 });
 let board
