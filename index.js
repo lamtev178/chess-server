@@ -21,6 +21,7 @@ io.on('connection', (socket) => {
     board = arg;
     socket.broadcast.emit("board", board)
   }); 
+  socket.on("endOfGame", (game) => socket.broadcast.emit("game", game)); 
   if( board !== undefined ) socket.emit("firstFetch", board);
   socket.emit("get color", users.filter(u => u.id === socket.id)[0].color);
   console.log('a user connected',socket.id, users);
